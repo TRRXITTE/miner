@@ -2,24 +2,22 @@
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Argon_discharge_tube.jpg/500px-Argon_discharge_tube.jpg)
 
-A CPU and NVIDIA miner for TurtleCoin / Chukwa / ChukwaV2 / WrkzCoin.
+A CPU and NVIDIA miner for Chukwa. XTCASH and ETRX supported.
 
-GPUs older than 800 series (8xx) are unfortunately not supported, as Cuda 11.1 does not support these (
+GPUs older than 800 series (8xx) are unfortunately not supported, as Cuda 12.0 does not support these (
 https://en.wikipedia.org/wiki/GeForce_700_series#Discontinued_support)
 
 ## Download
 
-[Go here to download the latest release.](https://github.com/turtlecoin/TRRXITTEminer/releases)
+[Go here to download the latest release.](https://github.com/TRRXITTE/miner/releases)
 
 If you prefer to compile yourself, read on. This can result in increased hashrates in some cases.
 
 ## Setup / Usage
 
-We suggest you follow the [guide here](https://docs.turtlecoin.lol/guides/mining/TRRXITTEminer-guide) to setup your miner.
+We suggest you follow the [guide here](https://documentation.trrxitte.com/guides/mining/TRRXITTEminer-guide) to setup your miner.
 
 ## Algorithms Supported
-* TurtleCoin (ChukwaV2) - choose `turtlecoin` or `chukwa_v2`
-* WrkzCoin - choose `wrkzcoin` or `chukwa_wrkz`
 * Chukwa - choose `chukwa`
 
 ## Notes
@@ -40,7 +38,7 @@ There are a couple of ways to configure the miner.
 
 For example:
 ```
-./TRRXITTEminer --algorithm turtlecoin --pool trtl.pool.mine2gether.com:2225 --username TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW
+TRRXITTEminer.exe --algorithm chukwa --pool mine.trrxitte.com:7777 --username cashYXyYm73ieNQ9NhkEnyJZs4L6GDPH9NchZmUHHuoWEJfBgiv2WWRCod7tv3UvUN69GpCtfTKra5fzsca1JZ6F4j2De8RjX2
 ```
 
 * Copy the below config to `config.json` and modify to your purposes.
@@ -60,7 +58,7 @@ For example:
                     "enabled": true,
                     "id": 0,
                     "intensity": 100.0,
-                    "name": "GeForce GTX 1070"
+                    "name": "GeForce GTX 1080 TI"
                 }
             ]
         }
@@ -68,39 +66,39 @@ For example:
     "pools": [
         {
             "agent": "",
-            "algorithm": "turtlecoin",
-            "host": "trtl.pool.mine2gether.com",
+            "algorithm": "chukwa",
+            "host": "mine.trrxitte.com",
             "niceHash": false,
             "password": "x",
-            "port": 2225,
+            "port": 7777,
             "priority": 0,
             "rigID": "",
             "ssl": false,
-            "username": "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW"
+            "username": "cashYXyYm73ieNQ9NhkEnyJZs4L6GDPH9NchZmUHHuoWEJfBgiv2WWRCod7tv3UvUN69GpCtfTKra5fzsca1JZ6F4j2De8RjX2"
         },
         {
             "agent": "",
-            "algorithm": "turtlecoin",
-            "host": "pool.turtle.hashvault.pro",
-            "niceHash": true,
-            "password": "x",
-            "port": 443,
-            "priority": 2,
-            "rigID": "",
-            "ssl": true,
-            "username": "TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW"
-        },
-        {
-            "agent": "",
-            "algorithm": "wrkz",
-            "host": "fastpool.xyz",
+            "algorithm": "chukwa",
+            "host": "mine.trrxitte.com",
             "niceHash": false,
             "password": "x",
-            "port": 3005,
-            "priority": 1,
+            "port": 7777,
+            "priority": 0,
             "rigID": "",
             "ssl": false,
-            "username": "WrkzjJMM8h9F8kDU59KUdTN8PvZmzu2HchyBG15R4SjLD4EcMg6qVWo3Qeqp4nNhgh1CPL7ixCL1P4MNwNPr5nTw11ma1MMXr7"
+            "username": "cashYXyYm73ieNQ9NhkEnyJZs4L6GDPH9NchZmUHHuoWEJfBgiv2WWRCod7tv3UvUN69GpCtfTKra5fzsca1JZ6F4j2De8RjX2"
+        },
+        {
+            "agent": "",
+            "algorithm": "chukwa",
+            "host": "mine.trrxitte.com",
+            "niceHash": false,
+            "password": "x",
+            "port": 7777,
+            "priority": 0,
+            "rigID": "",
+            "ssl": false,
+            "username": "cashYXyYm73ieNQ9NhkEnyJZs4L6GDPH9NchZmUHHuoWEJfBgiv2WWRCod7tv3UvUN69GpCtfTKra5fzsca1JZ6F4j2De8RjX2"
         }
     ]
 }
@@ -188,9 +186,8 @@ Run cmake with the -DENABLE_NVIDIA=OFF flag: `cmake -DENABLE_NVIDIA=OFF ..`
 - When it opens up select **C++ build tools**, it automatically selects the needed parts.
 - From the start menu, open 'x64 Native Tools Command Prompt for VS 2019'.
 - `cd C:/` (Or your directory of choice)
-- `git clone https://github.com/turtlecoin/TRRXITTEminer`
-- `cd TRRXITTEminer`
-- `git submodule update --init --recursive`
+- `git clone https://github.com/TRRXITTE/miner`
+- `cd miner`
 - `mkdir build`
 - `cd build`
 - `cmake -G "Visual Studio 16 2019" -A x64 ..`
@@ -225,8 +222,8 @@ You need to modify the below command for your version of ubuntu - see https://ap
 - `sudo pip install cmake`
 - `export CC=clang-6.0`
 - `export CXX=clang++-6.0`
-- `git clone https://github.com/turtlecoin/TRRXITTEminer`
-- `cd TRRXITTEminer`
+- `git clone https://github.com/TRRXITTE/miner`
+- `cd miner`
 - `git submodule update --init --recursive`
 - `mkdir build`
 - `cd build`
@@ -242,8 +239,8 @@ You need to modify the below command for your version of ubuntu - see https://ap
 - `sudo pip install cmake`
 - `export CC=gcc-8`
 - `export CXX=g++-8`
-- `git clone https://github.com/turtlecoin/TRRXITTEminer`
-- `cd TRRXITTEminer`
+- `git clone https://github.com/TRRXITTE/miner`
+- `cd miner`
 - `git submodule update --init --recursive`
 - `mkdir build`
 - `cd build`
@@ -254,8 +251,8 @@ You need to modify the below command for your version of ubuntu - see https://ap
 
 Reminder to use clang if possible. Make sure to set `CC` and `CXX` to point to `clang` and `clang++` as seen in the Ubuntu instructions.
 
-- `git clone https://github.com/turtlecoin/TRRXITTEminer`
-- `cd TRRXITTEminer`
+- `git clone https://github.com/TRRXITTE/miner`
+- `cd miner`
 - `git submodule update --init --recursive`
 - `mkdir build`
 - `cd build`
@@ -265,8 +262,8 @@ Reminder to use clang if possible. Make sure to set `CC` and `CXX` to point to `
 ### Android with Termux
 
 - `pkg install cmake clang git` (Enter `y` to confirm the install)
-- `git clone https://github.com/turtlecoin/TRRXITTEminer`
-- `cd TRRXITTEminer`
+- `git clone https://github.com/TRRXITTE/miner`
+- `cd miner`
 - `git submodule update --init --recursive`
 - `mkdir build`
 - `cd build`
@@ -276,7 +273,7 @@ Reminder to use clang if possible. Make sure to set `CC` and `CXX` to point to `
 Or, if you hate typing and just want something to copy paste, try this single command:
 
 ```
-cd && rm -Rf TRRXITTEminer && apt-get update && pkg update -y && pkg install cmake clang git -y && git clone https://github.com/turtlecoin/TRRXITTEminer && mkdir TRRXITTEminer/build && cd TRRXITTEminer/ && git submodule update --init --recursive && cd build/ && cmake -DENABLE_NVIDIA=OFF .. && make
+cd && rm -Rf TRRXITTEminer && apt-get update && pkg update -y && pkg install cmake clang git -y && git clone https://github.com/TRRXITTE/miner && mkdir TRRXITTEminer/build && cd TRRXITTEminer/ && git submodule update --init --recursive && cd build/ && cmake -DENABLE_NVIDIA=OFF .. && make
 ```
 
 ### Android Cross Compile
@@ -292,14 +289,11 @@ ANDROID_ABI can be
 
 Set this depending on the architecture of the phone you want to run it on.
 
-- `git clone https://github.com/turtlecoin/TRRXITTEminer`
-- `cd TRRXITTEminer`
+- `git clone https://github.com/TRRXITTE/miner`
+- `cd miner`
 - `git submodule update --init --recursive`
 - `mkdir build`
 - `cd build`
 - `cmake -DCMAKE_TOOLCHAIN_FILE="${HOME}/Android/sdk/android-ndk-r20/build/cmake/android.toolchain.cmake" -DANDROID_ABI=arm64-v8a -DANDROID_CROSS_COMPILE=ON ..`
 - `make`
 
-## Developing
-
-* Update submodules to latest commit: `git submodule foreach git pull origin master`
