@@ -2,7 +2,7 @@
 
 ![image](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Argon_discharge_tube.jpg/500px-Argon_discharge_tube.jpg)
 
-A CPU and NVIDIA miner for Chukwa. XTCASH and ETRX supported.
+A CPU and NVIDIA miner for Chukwa. XTCASH and XTE supported.
 
 GPUs older than 800 series (8xx) are unfortunately not supported, as Cuda 12.0 does not support these (
 https://en.wikipedia.org/wiki/GeForce_700_series#Discontinued_support)
