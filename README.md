@@ -38,7 +38,7 @@ There are a couple of ways to configure the miner.
 
 For example:
 ```
-TRRXITTEminer.exe --algorithm chukwa --pool mine.trrxitte.com:7777 --username cashYXyYm73ieNQ9NhkEnyJZs4L6GDPH9NchZmUHHuoWEJfBgiv2WWRCod7tv3UvUN69GpCtfTKra5fzsca1JZ6F4j2De8RjX2
+TRRXITTEminer.exe --algorithm chukwa --pool xte.trrxitte.com:3333 --username cashYXyYm73ieNQ9NhkEnyJZs4L6GDPH9NchZmUHHuoWEJfBgiv2WWRCod7tv3UvUN69GpCtfTKra5fzsca1JZ6F4j2De8RjX2
 ```
 
 * Copy the below config to `config.json` and modify to your purposes.
@@ -67,10 +67,10 @@ TRRXITTEminer.exe --algorithm chukwa --pool mine.trrxitte.com:7777 --username ca
         {
             "agent": "",
             "algorithm": "chukwa",
-            "host": "mine.trrxitte.com",
+            "host": "xte.trrxitte.com",
             "niceHash": false,
             "password": "x",
-            "port": 7777,
+            "port": 3333,
             "priority": 0,
             "rigID": "",
             "ssl": false,
@@ -79,10 +79,10 @@ TRRXITTEminer.exe --algorithm chukwa --pool mine.trrxitte.com:7777 --username ca
         {
             "agent": "",
             "algorithm": "chukwa",
-            "host": "mine.trrxitte.com",
+            "host": "xte.trrxitte.com",
             "niceHash": false,
             "password": "x",
-            "port": 7777,
+            "port": 3333,
             "priority": 0,
             "rigID": "",
             "ssl": false,
@@ -91,10 +91,10 @@ TRRXITTEminer.exe --algorithm chukwa --pool mine.trrxitte.com:7777 --username ca
         {
             "agent": "",
             "algorithm": "chukwa",
-            "host": "mine.trrxitte.com",
+            "host": "xte.trrxitte.com",
             "niceHash": false,
             "password": "x",
-            "port": 7777,
+            "port": 3333,
             "priority": 0,
             "rigID": "",
             "ssl": false,
