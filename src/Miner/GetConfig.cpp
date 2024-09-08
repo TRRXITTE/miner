@@ -408,7 +408,7 @@ Pool getPool()
     while (true)
     {
         std::cout << InformationMsg("Enter the pool address to mine to.") << std::endl
-                  << InformationMsg("This should look something like trtl.pool.mine2gether.com:2225: ");
+                  << InformationMsg("This should look something like xte.trrxitte.com:3333: ");
 
         std::string address;
         std::string host;
@@ -425,7 +425,7 @@ Pool getPool()
 
         if (!Utilities::parseAddressFromString(host, port, address))
         {
-            std::cout << WarningMsg("Invalid pool address! Should be in the form host:port, for example, trtl.pool.mine2gether.com:2225!")
+            std::cout << WarningMsg("Invalid pool address! Should be in the form host:port, for example, xte.trrxitte.com:3333!")
                       << std::endl;
 
             continue;
